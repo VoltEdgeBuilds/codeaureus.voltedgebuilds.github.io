@@ -1,0 +1,13 @@
+.chat-container {
+    width: 400px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.chat-history {
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px solid #eee;
+    padding: 10px;
+}
+/* Add more styles for messages, input box, etc. */
