@@ -1,15 +1,12 @@
-// This is a simplified example. In a real-world app, you'd use a server framework like Express.js.
-// Assuming this is a serverless function or a simple Node.js endpoint.
+// api/chat.js (Example)
+const express = require('express');
+const router = express.Router();
 
-module.exports = async (req, res) => {
-    const { message } = req.body;
-    let reply = "I'm sorry, I don't understand that.";
+router.post('/', (req, res) => {
+  // Your chat logic here
+  const message = req.body.message;
+  // ... process the message and send a response
+  res.json({ reply: 'Your response' });
+});
 
-    if (message.toLowerCase().includes("hello")) {
-        reply = "Hello there! How can I help you today?";
-    } else if (message.toLowerCase().includes("how are you")) {
-        reply = "I'm a bot, but I'm doing great! Thanks for asking.";
-    }
-
-    res.status(200).json({ reply });
-};
+module.exports = router;
